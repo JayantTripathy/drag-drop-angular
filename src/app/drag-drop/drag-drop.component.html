@@ -1,0 +1,19 @@
+    <div class="row">
+        <div class="col-sm-3">
+          <div class="panel m-height panel-default" droppable (onDrop)="removeDragDropItem($event)">
+            <div class="panel-heading">Drag and drop items here</div>
+            <div class="panel-body">
+              <li draggable *ngFor="let item of Playing11cricketers; let i = index" [dragData]="item" class="list-group-item">{{i+1}}.  {{item.Name}} 
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-sm-3">
+          <div class="panel m-heightpanel-default" droppable (onDrop)="addDragDropItem($event)">
+            <div class="panel-heading">Drag and drop items here</div>
+            <div class="panel-body">
+              <li *ngFor="let item of Restcricketers; let i = index" class="list-group-item" draggable [dragData]="item">{{i+1}}.  {{item.Name}} </li>
+            </div>
+          </div>
+        </div>
+    </div>
